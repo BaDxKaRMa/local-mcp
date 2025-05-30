@@ -23,5 +23,24 @@ python main.py
 
 The server will start and listen for commands via standard input/output.
 
+## VS Code Integration
+When you set up MCP in VS Code using the UI, the following configuration is added to your `settings.json` file (replace `<your-path>` with your actual project path):
+
+```json
+"mcp": {
+    "servers": {
+        "localserver": {
+            "type": "stdio",
+            "command": "<your-path>/bin/python",
+            "args": [
+                "<your-path>/main.py"
+            ]
+        }
+    }
+}
+```
+
+This allows VS Code to communicate with your local MCP server.
+
 ## License
 This project is licensed under the GNU General Public License v3.0 (GPLv3). See the LICENSE file for details.
